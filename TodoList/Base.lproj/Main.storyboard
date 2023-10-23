@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Mhw-kt-jOy" style="IBUITableViewCellStyleDefault" id="rwm-4s-cho">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Mhw-kt-jOy" style="IBUITableViewCellStyleDefault" id="rwm-4s-cho">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwm-4s-cho" id="J7p-8C-KvB">
@@ -50,9 +50,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mfn-rT-bim">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="o6V-sE-JMj"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o2a-kG-POl"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="o6V-sE-JMj">
+                            <connections>
+                                <action selector="editBtnPressed:" destination="BYZ-38-t0r" id="nGy-jI-Yx7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o2a-kG-POl">
+                            <connections>
+                                <action selector="addBtnPressed:" destination="BYZ-38-t0r" id="WWP-7v-1Jf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="k7Q-GI-NKU" id="pGW-60-NaO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
